@@ -67,6 +67,12 @@ void lcdMoveCursor(uint8_t row, uint8_t col){
 	lcdSendCommand(cellAddr);
 }
 
+void lcdSendString(char *str){
+	for(uint8_t i = 0; i < strlen(str); i++){
+		lcdSendData(str[i]);
+	}
+}
+
 void lcdInit(void){
 	HAL_Delay(50);
 	lcdSendCommand(0x30);

@@ -47,23 +47,6 @@ extern "C" {
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
 
-
-/* lcd pin macros */
-#define RS_PORT GPIOB
-#define RS_PIN GPIO_PIN_7
-//#define RW_PORT
-//#define RW_PIN
-#define E_PORT GPIOA
-#define E_PIN GPIO_PIN_15
-#define DB4_PORT GPIOA
-#define DB4_PIN GPIO_PIN_4
-#define DB5_PORT GPIOB
-#define DB5_PIN GPIO_PIN_0
-#define DB6_PORT GPIOC
-#define DB6_PIN GPIO_PIN_1
-#define DB7_PORT GPIOC
-#define DB7_PIN GPIO_PIN_0
-
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/

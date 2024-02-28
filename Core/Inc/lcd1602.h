@@ -56,6 +56,8 @@ void lcdSendData(uint8_t data);
 // moves cursor to specified row and column
 void lcdMoveCursor(uint8_t row, uint8_t column);
 
+void lcdSendString(char *str);
+
 void lcdInit(void);
 
 #endif /* INC_LCD1602_H_ */
