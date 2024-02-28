@@ -36,27 +36,26 @@
 #define RS_DATA					1
 
 /* cmd bit setting macros */
-#define CMD_CONFIG				0x28
+#define CMD_CONFIG				0x28 // interface length 4 bits, 2 lines, 5x8 font
 #define CMD_CLEAR				0x01
-#define CMD_DISPLAY_ON			0x0C
+#define CMD_DISPLAY_ON			0x0C // display on, cursor not visible, cursor blink off
 #define CMD_DISPLAY_OFF			0x08
-#define CMD_CURSOR_RIGHT		0x06
+#define CMD_CURSOR_RIGHT		0x06 // moves cursor right after each character
 
 /* lcd functions */
 
-//delays processor for specified number of us
+// delays processor for specified number of us
 void lcdDelayUs(uint16_t us);
 
-//sends command
+// sends command
 void lcdSendCommand(uint8_t cmd);
 
-//sends data
+// sends data
 void lcdSendData(uint8_t data);
 
-//moves cursor to specified row and column
+// moves cursor to specified row and column
 void lcdMoveCursor(uint8_t row, uint8_t column);
 
-//clears screen
-void lcdClear(void);
+void lcdInit(void);
 
 #endif /* INC_LCD1602_H_ */

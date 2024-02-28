@@ -66,3 +66,25 @@ void lcdMoveCursor(uint8_t row, uint8_t col){
 
 	lcdSendCommand(cellAddr);
 }
+
+void lcdInit(void){
+	HAL_Delay(50);
+	lcdSendCommand(0x30);
+	HAL_Delay(5);
+	lcdSendCommand(0x30);
+	HAL_Delay(1);
+	lcdSendCommand(0x30);
+	HAL_Delay(10);
+	lcdSendCommand(0x20); //set to 4-bit mode
+	HAL_Delay(10);
+
+	lcdSendCommand(CMD_CONFIG);
+	HAL_Delay(1);
+	lcdSendCommand(CMD_DISPLAY_OFF);
+	HAL_Delay(1);
+	lcdSendCommand(CMD_CLEAR);
+	HAL_Delay(2);
+	lcdSendCommand(CMD_CURSOR_RIGHT);
+	HAL_Delay(1);
+	lcdSendCommand(CMD_DISPLAY_ON);
+}
