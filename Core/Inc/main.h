@@ -47,6 +47,23 @@ extern "C" {
 /* Exported macro ------------------------------------------------------------*/
 /* USER CODE BEGIN EM */
 
+
+/* lcd pin macros */
+#define RS_PORT GPIOB
+#define RS_PIN GPIO_PIN_7
+//#define RW_PORT
+//#define RW_PIN
+#define E_PORT GPIOA
+#define E_PIN GPIO_PIN_15
+#define DB4_PORT GPIOA
+#define DB4_PIN GPIO_PIN_4
+#define DB5_PORT GPIOB
+#define DB5_PIN GPIO_PIN_0
+#define DB6_PORT GPIOC
+#define DB6_PIN GPIO_PIN_1
+#define DB7_PORT GPIOC
+#define DB7_PIN GPIO_PIN_0
+
 /* USER CODE END EM */
 
 /* Exported functions prototypes ---------------------------------------------*/
@@ -59,18 +76,30 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define B1_Pin GPIO_PIN_13
 #define B1_GPIO_Port GPIOC
+#define DB7_Pin GPIO_PIN_0
+#define DB7_GPIO_Port GPIOC
+#define DB6_Pin GPIO_PIN_1
+#define DB6_GPIO_Port GPIOC
 #define USART_TX_Pin GPIO_PIN_2
 #define USART_TX_GPIO_Port GPIOA
 #define USART_RX_Pin GPIO_PIN_3
 #define USART_RX_GPIO_Port GPIOA
+#define DB4_Pin GPIO_PIN_4
+#define DB4_GPIO_Port GPIOA
 #define LD2_Pin GPIO_PIN_5
 #define LD2_GPIO_Port GPIOA
+#define DB5_Pin GPIO_PIN_0
+#define DB5_GPIO_Port GPIOB
 #define TMS_Pin GPIO_PIN_13
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14
 #define TCK_GPIO_Port GPIOA
+#define E_Pin GPIO_PIN_15
+#define E_GPIO_Port GPIOA
 #define SWO_Pin GPIO_PIN_3
 #define SWO_GPIO_Port GPIOB
+#define RS_Pin GPIO_PIN_7
+#define RS_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

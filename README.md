@@ -1,2 +1,2 @@
 # lcd1602-driver
-STM32F4xx NUCLEO driver for LCD 1602
+ LCD 1602 driver for STM32 NUCLEO-F4xx board (tested with NUCLEO-F401RE)

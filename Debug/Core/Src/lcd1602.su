@@ -1,0 +1,5 @@
+../Core/Src/lcd1602.c:15:6:lcdDelayUs	16	static
+../Core/Src/lcd1602.c:20:6:lcdSend	16	static
+../Core/Src/lcd1602.c:35:6:lcdSendCommand	16	static
+../Core/Src/lcd1602.c:45:6:lcdSendData	16	static
+../Core/Src/lcd1602.c:55:6:lcdMoveCursor	24	static
