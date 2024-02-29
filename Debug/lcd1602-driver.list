@@ -29,23 +29,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  12 .comment      00000043  00000000  00000000  0002003c  2**0
                   CONTENTS, READONLY
- 13 .debug_info   00008930  00000000  00000000  0002007f  2**0
+ 13 .debug_info   00008932  00000000  00000000  0002007f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 000016ce  00000000  00000000  000289af  2**0
+ 14 .debug_abbrev 000016e7  00000000  00000000  000289b1  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_aranges 00000998  00000000  00000000  0002a080  2**3
+ 15 .debug_aranges 00000998  00000000  00000000  0002a098  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_rnglists 00000762  00000000  00000000  0002aa18  2**0
+ 16 .debug_rnglists 00000762  00000000  00000000  0002aa30  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  00015d76  00000000  00000000  0002b17a  2**0
+ 17 .debug_macro  00015d76  00000000  00000000  0002b192  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   0000a964  00000000  00000000  00040ef0  2**0
+ 18 .debug_line   0000a964  00000000  00000000  00040f08  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    0008a195  00000000  00000000  0004b854  2**0
+ 19 .debug_str    0008a195  00000000  00000000  0004b86c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_frame  000027a4  00000000  00000000  000d59ec  2**2
+ 20 .debug_frame  000027a4  00000000  00000000  000d5a04  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 0000005b  00000000  00000000  000d8190  2**0
+ 21 .debug_line_str 0000005b  00000000  00000000  000d81a8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -361,7 +361,7 @@ Disassembly of section .text:
  80004de:	bf00      	nop
 
 080004e0 <lcdDelayUs>:
-extern TIM_HandleTypeDef htim1;
+static void lcdSendData(char data);
 
 //sends data to LCD (local helper function)
 void lcdSend(char data, uint8_t rs);
@@ -513,7 +513,7 @@ void lcdSendCommand(uint8_t cmd){
 
 080005ec <lcdSendData>:
 
-void lcdSendData(char data){
+static void lcdSendData(char data){
  80005ec:	b580      	push	{r7, lr}
  80005ee:	b082      	sub	sp, #8
  80005f0:	af00      	add	r7, sp, #0

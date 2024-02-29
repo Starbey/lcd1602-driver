@@ -9,6 +9,9 @@
 
 extern TIM_HandleTypeDef htim1;
 
+// sends data
+static void lcdSendData(char data);
+
 //sends data to LCD (local helper function)
 void lcdSend(char data, uint8_t rs);
 
@@ -42,7 +45,7 @@ void lcdSendCommand(uint8_t cmd){
 	lcdSend( (cmd >> 0) & 0x0f, RS_CMD );
 }
 
-void lcdSendData(char data){
+static void lcdSendData(char data){
 	/* we're in 4-bit mode, so send 4 MSBs, then send 4 LSBs */
 
 	//send 4 MSBs
