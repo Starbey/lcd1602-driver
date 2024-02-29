@@ -92,7 +92,6 @@ int main(void)
   HAL_TIM_Base_Start(&htim1);
 
   lcdInit();
-  lcdMoveCursor(0, 0);
 
 
   /* USER CODE END 2 */
@@ -101,6 +100,15 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	lcdMoveCursor(0, 0);
+	lcdSendString("Hello");
+	HAL_Delay(1000);
+	lcdClear();
+
+	lcdMoveCursor(1, 0);
+	lcdSendString("World");
+	HAL_Delay(1000);
+	lcdClear();
 
     /* USER CODE END WHILE */
 

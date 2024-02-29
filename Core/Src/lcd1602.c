@@ -60,7 +60,7 @@ void lcdMoveCursor(uint8_t row, uint8_t col){
 		cellAddr = 0x80 | col;
 		break;
 	case 1:
-		cellAddr = 0xA0 | col;
+		cellAddr = 0xC0 | col;
 		break;
 	}
 
