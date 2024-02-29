@@ -42,6 +42,10 @@
 #define CMD_DISPLAY_OFF			0x08
 #define CMD_CURSOR_RIGHT		0x06 // moves cursor right after each character
 
+/* command delay times */
+#define CMD_CLEAR_DELAY			2000
+#define CMD_CURSOR_DELAY		40
+
 /* lcd functions */
 
 // delays processor for specified number of us
@@ -55,6 +59,9 @@ void lcdSendData(char data);
 
 // moves cursor to specified row and column
 void lcdMoveCursor(uint8_t row, uint8_t column);
+
+//clears screen
+void lcdClear(void);
 
 void lcdSendString(char *str);
 

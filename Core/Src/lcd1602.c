@@ -65,6 +65,12 @@ void lcdMoveCursor(uint8_t row, uint8_t col){
 	}
 
 	lcdSendCommand(cellAddr);
+	lcdDelayUs(CMD_CURSOR_DELAY);
+}
+
+void lcdClear(void){
+	lcdSendCommand(CMD_CLEAR);
+	lcdDelayUs(CMD_CLEAR_DELAY);
 }
 
 void lcdSendString(char *str){

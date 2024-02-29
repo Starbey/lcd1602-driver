@@ -93,9 +93,7 @@ int main(void)
 
   lcdInit();
   lcdMoveCursor(0, 0);
-  lcdSendData('A');
-  lcdSendString("Test");
-  //lcdSendString("TEST");
+
 
   /* USER CODE END 2 */
 
