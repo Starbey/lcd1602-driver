@@ -3,4 +3,5 @@
 ../Core/Src/lcd1602.c:35:6:lcdSendCommand	16	static
 ../Core/Src/lcd1602.c:45:6:lcdSendData	16	static
 ../Core/Src/lcd1602.c:55:6:lcdMoveCursor	24	static
-../Core/Src/lcd1602.c:70:6:lcdInit	8	static
+../Core/Src/lcd1602.c:70:6:lcdSendString	16	static
+../Core/Src/lcd1602.c:78:6:lcdInit	8	static

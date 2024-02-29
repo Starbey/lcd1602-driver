@@ -51,7 +51,7 @@ void lcdDelayUs(uint16_t us);
 void lcdSendCommand(uint8_t cmd);
 
 // sends data
-void lcdSendData(uint8_t data);
+void lcdSendData(char data);
 
 // moves cursor to specified row and column
 void lcdMoveCursor(uint8_t row, uint8_t column);
