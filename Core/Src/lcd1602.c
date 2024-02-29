@@ -74,11 +74,11 @@ void lcdClear(void){
 }
 
 void lcdSendString(char *str){
-//	for(uint8_t i = 0; i < strlen(str); i++){
-//		lcdSendData(str[i]);
-//	}
+	for(uint8_t i = 0; i < strlen(str); i++){
+		lcdSendData(str[i]);
+	}
 
-	while (*str) lcdSendData(*str++);
+	//while (*str) lcdSendData(*str++);
 }
 
 void lcdInit(void){
