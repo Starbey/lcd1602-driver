@@ -458,16 +458,16 @@ void lcdSend(char data, uint8_t rs){
  8000586:	f44f 4100 	mov.w	r1, #32768	; 0x8000
  800058a:	480b      	ldr	r0, [pc, #44]	; (80005b8 <lcdSend+0xa4>)
  800058c:	f000 fe1a 	bl	80011c4 <HAL_GPIO_WritePin>
-	lcdDelayUs(8);
- 8000590:	2008      	movs	r0, #8
+	lcdDelayUs(50);
+ 8000590:	2032      	movs	r0, #50	; 0x32
  8000592:	f7ff ffa5 	bl	80004e0 <lcdDelayUs>
 	HAL_GPIO_WritePin(E_PORT, E_PIN, 0);
  8000596:	2200      	movs	r2, #0
  8000598:	f44f 4100 	mov.w	r1, #32768	; 0x8000
  800059c:	4806      	ldr	r0, [pc, #24]	; (80005b8 <lcdSend+0xa4>)
  800059e:	f000 fe11 	bl	80011c4 <HAL_GPIO_WritePin>
-	lcdDelayUs(8);
- 80005a2:	2008      	movs	r0, #8
+	lcdDelayUs(50);
+ 80005a2:	2032      	movs	r0, #50	; 0x32
  80005a4:	f7ff ff9c 	bl	80004e0 <lcdDelayUs>
 }
  80005a8:	bf00      	nop
@@ -654,26 +654,26 @@ void lcdInit(void){
 	HAL_Delay(50);
  80006b6:	2032      	movs	r0, #50	; 0x32
  80006b8:	f000 faf6 	bl	8000ca8 <HAL_Delay>
-	lcdSendCommand(0x30);
- 80006bc:	2030      	movs	r0, #48	; 0x30
+	lcdSendCommand(0x03);
+ 80006bc:	2003      	movs	r0, #3
  80006be:	f7ff ff7d 	bl	80005bc <lcdSendCommand>
 	HAL_Delay(5);
  80006c2:	2005      	movs	r0, #5
  80006c4:	f000 faf0 	bl	8000ca8 <HAL_Delay>
-	lcdSendCommand(0x30);
- 80006c8:	2030      	movs	r0, #48	; 0x30
+	lcdSendCommand(0x03);
+ 80006c8:	2003      	movs	r0, #3
  80006ca:	f7ff ff77 	bl	80005bc <lcdSendCommand>
 	HAL_Delay(1);
  80006ce:	2001      	movs	r0, #1
  80006d0:	f000 faea 	bl	8000ca8 <HAL_Delay>
-	lcdSendCommand(0x30);
- 80006d4:	2030      	movs	r0, #48	; 0x30
+	lcdSendCommand(0x03);
+ 80006d4:	2003      	movs	r0, #3
  80006d6:	f7ff ff71 	bl	80005bc <lcdSendCommand>
 	HAL_Delay(10);
  80006da:	200a      	movs	r0, #10
  80006dc:	f000 fae4 	bl	8000ca8 <HAL_Delay>
-	lcdSendCommand(0x20); //set to 4-bit mode
- 80006e0:	2020      	movs	r0, #32
+	lcdSendCommand(0x02); //set to 4-bit mode
+ 80006e0:	2002      	movs	r0, #2
  80006e2:	f7ff ff6b 	bl	80005bc <lcdSendCommand>
 	HAL_Delay(10);
  80006e6:	200a      	movs	r0, #10
